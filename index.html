@@ -1,13 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>PDF Viewer</title>
-  </head>
-  <body>
-    <iframe
-      src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/qaisar-data-science/blpdf/437f4bb769c5e441692f5c299181d3d8696135d2/blp.pdf&embedded=true"
-      style="width:100%; height:1400px;"
-      frameborder="0">
-    </iframe>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDF Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .toolbar {
+      background-color: #f5f5f5;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .toolbar h1 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .download-btn {
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .download-btn:hover {
+      background-color: #0059c1;
+    }
+
+    .download-btn svg {
+      margin-right: 6px;
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100vh - 50px);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <h1>PDF Preview</h1>
+    <a 
+      href="https://raw.githubusercontent.com/qaisar-data-science/blpdf/437f4bb769c5e441692f5c299181d3d8696135d2/blp.pdf" 
+      class="download-btn" 
+      download
+      target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="white" viewBox="0 0 24 24">
+        <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h4.66v-4h3.84L12 2z"/>
+      </svg>
+      Download PDF
+    </a>
+  </div>
+
+  <iframe 
+    src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/qaisar-data-science/blpdf/437f4bb769c5e441692f5c299181d3d8696135d2/blp.pdf&embedded=true">
+  </iframe>
+
+</body>
 </html>
